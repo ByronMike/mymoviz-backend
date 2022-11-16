@@ -13,6 +13,7 @@ router.get("/movies", (req, res) => {
   )
     .then((response) => response.json())
     .then((data) => {
+      console.log("retour du webservice", data)
       // Voir l'objet de tableaux (d'objets) DIRECTEMENT à partir de l'URL de l'API (dans le navigateur)
       res.json({ movies: data.results });
     });
